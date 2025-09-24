@@ -1,0 +1,16 @@
+{
+  "name": "repo-plantilla-prettier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plantilla base para nuevos proyectos con Prettier y VS Code settings.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "fmt": "prettier . --write",
+    "fmt:check": "prettier . --check",
+    "postinstall": "echo \"✅ Plantilla lista. Usá 'npm run fmt' para formatear.\""
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
