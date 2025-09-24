@@ -2,3 +2,12 @@
   "*.{js,jsx,ts,tsx}": ["eslint --fix"],
   "*.{json,md,html,css,scss}": ["prettier --write"]
 }
+// package.json
+"lint-staged": {
+  "*.{js,jsx,ts,tsx}": ["eslint --fix"],
+  "*.{json,md,html,css,scss}": ["prettier --write"]
+},
+"lint-staged-config": {
+  "no-stash": true
+}
+
