@@ -1,24 +1,24 @@
-# Repo plantilla (Prettier + VS Code)
+# Plantilla: Prettier + ESLint (flat) + Husky + lint-staged
 
-Plantilla mínima para iniciar proyectos con indentación y formato automáticos.
+- **Prettier**: formato/indentación automáticos
+- **ESLint (flat config)**: buenas prácticas JS/TS
+- **Husky + lint-staged**: validación y formato en `pre-commit`
 
-## Uso rápido
-1. Instalá dependencias:
-   ```bash
-   npm i
-   ```
-2. Formateá todo el repo:
-   ```bash
-   npm run fmt
-   ```
-3. Verificación (sin escribir cambios):
-   ```bash
-   npm run fmt:check
-   ```
+## Scripts
 
-## VS Code
-La carpeta `.vscode/` fuerza a usar Prettier al guardar con 2 espacios y EOL LF.
+- `npm run fmt` — Prettier (write)
+- `npm run fmt:check` — Prettier (check)
+- `npm run lint` — ESLint
+- `npm run lint:fix` — ESLint con `--fix`
 
-## Convertir en Template en GitHub
-- Settings → **Template repository** → habilitar.
-- **Use this template** para crear nuevos repos con esta base.
+## Hooks
+
+- `pre-commit` ejecuta `lint-staged`:
+  - Lint + fix en JS/TS
+  - Prettier en JSON/MD/HTML/CSS
+
+## Uso
+
+1. `npm i`
+2. `npm run fmt`
+3. `npm run lint`
